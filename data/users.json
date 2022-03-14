@@ -1,0 +1,23 @@
+[
+    {
+        "username": "shubh",
+        "hash": "$2a$10$FcBt0DWSPAZ9saI9EJQuFuENeM6TmVDGYeww4UsTDEp6FJ.3rQbQe",
+        "id": 1,
+        "dateCreated": "2022-03-14T02:37:16.029Z",
+        "dateUpdated": "2022-03-14T02:37:16.029Z"
+    },
+    {
+        "username": "test",
+        "hash": "$2a$10$h12KPKUlYtTq439Zn/Q3UuHDarKdeSixmut7KdZo4za8iPW.FRy.2",
+        "id": 2,
+        "dateCreated": "2022-03-14T02:55:32.253Z",
+        "dateUpdated": "2022-03-14T02:55:32.253Z"
+    },
+    {
+        "username": "test2",
+        "hash": "$2a$10$Qd/rImfQjXWf5dIn6sEVEe5cBx6kdLvqggy6t.6deRe0BEZzWhb2u",
+        "id": 3,
+        "dateCreated": "2022-03-14T03:03:29.807Z",
+        "dateUpdated": "2022-03-14T03:03:29.807Z"
+    }
+]

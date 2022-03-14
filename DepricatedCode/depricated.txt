@@ -1,0 +1,43 @@
+import { useState, useEffect } from 'react';
+
+// import { NavLink } from '.';
+import { userService } from 'services';
+import {Navbar} from '../../DepricatedCode/Navbar'
+export { Nav };
+import styles from './Navbar.module.css';
+
+function Nav() {
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        const subscription = userService.user.subscribe(x => setUser(x));
+        return () => subscription.unsubscribe();
+    }, []);
+
+    function logout() {
+        userService.logout();
+    }
+
+    // only show nav when logged in
+    // if (!user) return null;
+    
+    return (
+        
+        <div>
+        <Navbar />
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div>
+          <h1 className = {styles.bigtext}>Track. Share. Save.</h1>
+          <h1 className = { styles.smalltext }>Welcome to FuelQuote. Our platform is here to serve you better and faster. We will provide you the best prices and customer service. Created by Kevin Flores, Manasa Dendukuri, Chetana Pitani</h1>
+        </div>
+
+      </div>
+      
+    );
+}
+
+Nav.jsx
+
