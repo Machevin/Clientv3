@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 
-import { Link } from './Navbar';
+import { Link } from '.';
 
 export { NavLink };
 

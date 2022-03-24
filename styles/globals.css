@@ -1,105 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-/* text in form */
+a { cursor: pointer; }
 
-form.center {
-    position: flex;
-    text-align: center;
-    margin-top: 120px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.app-container {
+    min-height: 350px;
 }
-
-
-/* mainbanner design */
-
-div.mainbanner {
-    position: flex;
-    margin-left: -20px;
-    margin-top: -40px;
-    margin-right: -20px;
-    padding: 0px;
-    background: linear-gradient(90deg, #AD91E7 0%, rgba(173, 145, 231, 0) 56.28%), linear-gradient(90deg, #AED9FF 55.24%, rgba(152, 198, 239, 0) 99.34%), #DFF2A7;
-}
-
-
-/* text in main banner */
-
-h1.header {
-    text-align: center;
-    padding: 70px 0px;
-    font-size: 60px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: normal;
+h4.box-header {
     color: #FFFFFF;
-}
-
-
-/* smaller banner design */
-
-div.smallbanner {
-    position: absolute;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+    top: 0;
     width: 100%;
-    height: 70px;
-    left: 0px;
-    top: 219px;
-    background: rgba(223, 242, 167, 0.39);
-}
-
-
-/* profile link */
-
-h2.profile {
-    float: left;
-    margin-left: 465px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
-    font-size: 22px;
-    color: #000000;
-}
-
-
-/* fuel quote form link */
-
-h2.form {
-    float: left;
-    margin-left: 300px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: normal;
-    font-size: 22px;
-    color: #000000;
-}
-h1.bigtext {
-    font-family: 'Courier New', Courier, monospace;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 90px;
-    margin-left: 100px;
-}
-
-h1.smalltext {
-    font-family: 'Courier New', Courier, monospace;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 40px;
-    margin-left: 100px;
-    margin-right: 100px;
-}
-
-/* fuel quote history link */
-
-h2.history {
-    float: right;
-    margin-right: 300px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: normal;
-    font-size: 22px;
-    color: #000000;
-}
-
-
-/* button text */
-
-button.button {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(115.76deg, #8F5FF4 0%, rgba(173, 145, 231, 0) 49.8%), linear-gradient(119.29deg, #74B8F4 54.35%, rgba(152, 198, 239, 0) 100%), #D1FC52;
 }

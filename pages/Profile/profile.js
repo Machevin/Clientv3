@@ -1,6 +1,5 @@
 import React, { Component , useState} from 'react'
 import styles from './profile.module.css'
-import {ProfileNav} from '../../components/Navbar/ProfileNav'
 // import { ClientRequest } from 'http'
 // import Enzyme from 'enzyme';
 // import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
@@ -38,10 +37,7 @@ const Profile =()=> {
 
     return ( 
                 
-        <body>
-            <ProfileNav />
-                
-                
+        <body>  
             <form className = { styles.center } onSubmit = { handleSubmit } >
                 <div> { /* type in full name */ } 
                     <label > Full Name </label>  

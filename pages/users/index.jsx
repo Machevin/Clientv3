@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 
-import { Link, Spinner } from 'components/Navbar';
+import { Link, Spinner } from 'components';
 import { Layout } from 'components/users';
 import { userService } from 'services';
-import 'styles/globals.css';
+
 export default Index;
 
 function Index() {

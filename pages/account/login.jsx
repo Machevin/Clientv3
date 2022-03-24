@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 
-import { Link } from 'components/Navbar';
+import { Link } from 'components';
 import { Layout } from 'components/account';
 import { userService, alertService } from 'services';
 
@@ -36,7 +36,7 @@ function Login() {
     return (
         <Layout>
             <div className="card">
-                <h4 className="card-header">Login</h4>
+                <h4 className="box-header">Login</h4>
                 <div className="card-body">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-group">
