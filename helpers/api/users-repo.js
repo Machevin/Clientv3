@@ -1,51 +1,65 @@
-const fs = require('fs');
+// const fs = require('fs');
 
-// users in JSON file for simplicity, store in a db for production applications
-let users = require('data/users.json');
+const { db } = await connectToDatabase();
 
-export const usersRepo = {
-    getAll: () => users,
-    getById: id => users.find(x => x.id.toString() === id.toString()),
-    find: x => users.find(x),
-    create,
-    update,
-    delete: _delete
+import { connectToDatabase } from "../../util/mongodb";
+
+export default async (req, res) => {
+  const { db } = await connectToDatabase();
+
+  const Clients = await db
+    .collection("clients")
+  res.json(Clients);
 };
 
-function create(user) {
-    // generate new user id
-    user.id = users.length ? Math.max(...users.map(x => x.id)) + 1 : 1;
 
-    // set date created and updated
-    user.dateCreated = new Date().toISOString();
-    user.dateUpdated = new Date().toISOString();
 
-    // add and save user
-    users.push(user);
-    saveData();
-}
+// users in JSON file for simplicity, store in a db for production applications
+// let users = require(db);
 
-function update(id, params) {
-    const user = users.find(x => x.id.toString() === id.toString());
+// export const usersRepo = {
+//     getAll: () => users,
+//     getById: id => users.find(x => x.id.toString() === id.toString()),
+//     find: x => users.find(x),
+//     create,
+//     update,
+//     delete: _delete
+// };
 
-    // set date updated
-    user.dateUpdated = new Date().toISOString();
+// function create(user) {
+//     // generate new user id
+//     user.id = users.length ? Math.max(...users.map(x => x.id)) + 1 : 1;
 
-    // update and save
-    Object.assign(user, params);
-    saveData();
-}
+//     // set date created and updated
+//     user.dateCreated = new Date().toISOString();
+//     user.dateUpdated = new Date().toISOString();
 
-// prefixed with underscore '_' because 'delete' is a reserved word in javascript
-function _delete(id) {
-    // filter out deleted user and save
-    users = users.filter(x => x.id.toString() !== id.toString());
-    saveData();
+//     // add and save user
+//     users.push(user);
+//     saveData();
+// }
+
+// function update(id, params) {
+//     const user = users.find(x => x.id.toString() === id.toString());
+
+//     // set date updated
+//     user.dateUpdated = new Date().toISOString();
+
+//     // update and save
+//     Object.assign(user, params);
+//     saveData();
+// }
+
+// // prefixed with underscore '_' because 'delete' is a reserved word in javascript
+// function _delete(id) {
+//     // filter out deleted user and save
+//     users = users.filter(x => x.id.toString() !== id.toString());
+//     saveData();
     
-}
+// }
 
-// private helper functions
+// // private helper functions
 
-function saveData() {
-    fs.writeFileSync('data/users.json', JSON.stringify(users, null, 4));
-}
+// function saveData() {
+//     fs.writeFileSync('data/users.json', JSON.stringify(users, null, 4));
+// }

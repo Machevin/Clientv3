@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './Nav.module.css';
 import { NavLink } from '.';
-import { userService } from 'services';
+import { userService } from '/services';
 import Link from 'next/link'
 export { Nav };
 
